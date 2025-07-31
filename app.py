@@ -6,7 +6,7 @@ st.title("🔍 Recherche dans un fichier Excel")
 uploaded_file = st.file_uploader("Choisissez un fichier Excel", type=["xlsx"])
 
 if uploaded_file is not None:
-    df = pd.read_excel("projet PFA.xlsx")
+    df = pd.read_excel(uploaded_file)
 
     st.write("Aperçu du fichier complet :")
     st.dataframe(df)
